@@ -7,14 +7,14 @@ import ru.levelup.bank.system.repository.JdbcAccountRepository;
 
 import java.util.Collection;
 
-public class AccountListingAction {
+public class AccountListingAction implements ConsoleAction {
 
     private final AccountRepository accountRepository;
 
     public AccountListingAction () {
         this.accountRepository = new JdbcAccountRepository();
     }
-
+    @Override
     public void doAction(){
         //Показать список счетов пользователя...
         //1. Получаем идентификатор пользователя

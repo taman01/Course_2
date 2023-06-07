@@ -15,6 +15,7 @@ public class ConsoleMenu {
         System.out.println("2. Открыть новый счет");
         System.out.println("3. Изменить счет");
         System.out.println("4. Удалить счет");
+        System.out.println("0. Выход");
         System.out.println();
     }
 

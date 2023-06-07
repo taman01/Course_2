@@ -5,14 +5,14 @@ import ru.levelup.bank.system.menu.ConsoleMenu;
 import ru.levelup.bank.system.repository.AccountRepository;
 import ru.levelup.bank.system.repository.JdbcAccountRepository;
 
-public class AccountUpdateAction {
+public class AccountUpdateAction implements ConsoleAction {
 
     private final AccountRepository accountRepository;
 
     public AccountUpdateAction () {
         this.accountRepository = new JdbcAccountRepository();
     }
-
+@Override
     public void doAction(){
         System.out.println("---------------");
         Long accountId = ConsoleMenu.readLong("Введите идентификатор счета, который необходимо изменить");
